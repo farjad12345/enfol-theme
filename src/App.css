@@ -486,7 +486,7 @@ background-color: transparent ;
 .contact-us  form{
   display: flex;
   flex-wrap: wrap;
-  max-width: 700px;
+  /* max-width: 700px; */
   /* min-height: 500px; */
 background-color: rgba(255, 255, 255, 0.2);  padding: 30px;
   flex-direction: column;
@@ -498,7 +498,6 @@ background-color: rgba(255, 255, 255, 0.2);  padding: 30px;
 , white 55% 100%)  ;
   z-index: 500;
   height: 1px;
-  width: 500px;
 }
 .icon-parent-contact-us .fa-heart{
   background:transparent;
