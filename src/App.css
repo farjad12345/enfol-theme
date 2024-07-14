@@ -21,7 +21,7 @@ a {
   font-family: second-family;
   display: flex;
   justify-content: space-between;
-  padding: 0px 25px;
+  padding: 0px 50px;
   align-items: center ;
   position: fixed;
   top: 0;
