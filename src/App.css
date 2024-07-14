@@ -22,12 +22,12 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0px 25px;
-  align-items: center !important;
-  position: fixed;
+  align-items: center ;
+  position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   background-color: #333;
 z-index: 500000;
 }
@@ -71,6 +71,7 @@ ul.menu li:first-child a span {
 }
 .menu-toggler {
   display: none;
+
 }
 
 .icon-parent {
@@ -600,7 +601,7 @@ border: solid 1px white;
 cursor: pointer;
 transition: all .5s;
 position: fixed;
-right: 15px;
+right: 15%;
 bottom: 15px;
 opacity: .7;}
 .elavator:hover{
@@ -619,9 +620,7 @@ flex-wrap: wrap;
   .nav {
     background-color: var(--main-color);
   }
-  .nav .logo {
-    width: 230px;
-  }
+
   .display-none {
     display: none;
   }
@@ -647,7 +646,7 @@ flex-wrap: wrap;
     top: 100%;
     transition: all 0.5s;
   }
-  ul.menu li Link span {
+  ul.menu span {
     border: none;
     width: 100%;
     text-align: center;

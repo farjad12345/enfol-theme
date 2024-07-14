@@ -437,11 +437,11 @@ function App() {
           </div>
         </div>
       </footer>
-    <Link to="home" smooth={true} duration={500}>
     <div className="elavator">
+    <Link to="home" smooth={true} duration={500}>
     <FontAwesomeIcon  icon={faChevronUp} />  
-     </div>
   </Link>
+     </div>
      </div>
   );
 }
