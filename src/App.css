@@ -1,38 +1,719 @@
-.App {
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../public/images/set1-happy-couple-1500x630.jpg) no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  font-family: second-family;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px;
+  align-items: center !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: flex-start;
+  background-color: #333;
+z-index: 500000;
+}
+
+.nav .logo {
+  width: 230px;
+}
+.menu {
+  display: flex;
+}
+
+ul.menu li a {
+  display: flex;
+  padding: 15px 0;
+  color: white;
+  cursor: pointer;
+}
+ul.menu li a span {
+  border-left: 1px solid white;
+  display: block;
+  padding: 0 15px;
+  color: var(--text-white);
+  font-size: 14px;
+}
+ul.menu li:first-child a span {
+  border-left: none;
+}
+.header .header-section {
+  color: white;
+  text-align: center;
+  padding: 200px 0;
+}
+.header .header-section h1 {
+  font-size: 90px;
+  margin-bottom: 70px;
+  word-spacing: 50px;
+}
+.header .header-section p {
+  font-family: second-family;
+  line-height: 1.8;
+}
+.menu-toggler {
+  display: none;
+}
+
+.icon-parent {
+  max-width: 400px;
+  height: 1px;
+  background-color: #333;
+  margin: 50px auto;
+  position: relative;
+}
+.icon-parent .fa-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 18px;
+  background-color: white;
+  padding: 3px 20px;
+}
+.icon-parent  .light-gray
+{
+  background:  var(--light-gray) ;
+}
+
+.our-story-top {
+  text-align: center;
+  padding: 120px 15px;
+  position: relative;
+}
+
+
+.icon-parent .fa-heart.gray {
+  color: var(--light-gray);
+}
+.our-story-top h2 {
+font-size: 45px;
+}
+
+.our-story-top p {
+  font-family: second-family;
+  font-size: 18px;
+  color: #333;
+  margin: 40px 0;
+  line-height: 1.7;
+}
+.our-story-top time {
+  font-family: second-family sans-serif;
+  color: var(--second-color);
+  font-size: 40px;
+  border-bottom: 1px solid #33333376;
+}
+.our-story-main{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 120px 15px;
+  background-color: var(--light-gray);
+}
+.our-story-main::after{
+  content: "";
+  display: block;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top: 20px solid var(--light-gray);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50% , 0);
+}
+
+.our-story-main h2{
+  font-size: 45px;
+}
+.our-story-main p {
+  font-family: second-family;
+  font-size: 16px;
+  color: #333;
+  margin: 40px 0;
+  line-height: 1.7;
+
+}
+.our-story-wraper{
+  display: flex;
+  text-align: center
+  ;justify-content: space-between;
+  align-items: center;
+}
+.our-story-wraper p{
+  width: 48%;
+  text-align: left;
+}
+.who-are-we{
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../public/images/set1-young-couple-bw.jpg) no-repeat center 60%;
+  color: white;
+  background-size: cover;
+background-attachment: fixed;
+}  
+
+.who-are-we h2{
+  font-size: 45px;
+}
+.who-are-we p {
+  font-family: second-family;
+  font-size: 18px;
+  margin: 40px 0;
+  line-height: 1.7;
+}
+.Groom-Bride {
+  width: 100%;
+  display: flex;
+  padding: 70px 0;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  
+}
+
+.Groom-Bride::after{
+  content: "";
+  display: block;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top: 20px solid var(--text-white);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50% , 0);
+}
+.Groom-Bride .groom-bride-box{
+  width: 48%;
+}
+
+.groom-bride-box h3{
+  text-align: center;
+  font-size: 45px;
+  margin: 20px 0;
+  padding-top: 20px;
+}
+.groom-bride-box figure .grom-bride-box-image{
+  overflow: hidden;
+
+}
+.groom-bride-box figure img{
+  width: 100%;
+  transition: all .5s ;
+}
+.groom-bride-box:hover figure img{
+  width: 100%;
+  transform: scale(1.1);
+  filter: grayscale(1);
+}
+
+.groom-bride-box  figcaption
+{   font-size: 32px;
+  text-align: center;
+  margin: 20px 0; 
+}
+.groom-bride-box p{
+font-size: 16px;
+margin: 10px;
+text-align: center;
+}
+.customers{
+  width: 100%;
+  display: flex;
+}
+.customers-side h2{
+  font-size: 45px;
+}
+.customers-side{
+  padding: 50px;
+  width: 50%;
+  justify-content: space-between;
+  align-self: center;
+  }
+.customers-side h2{
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.costomer-left-side{
+  background-color: #f8f8f8;
+
+}
+.costomer-right-side{
+  background-color: #f9f2f2;
+}
+
+.costomer-right-side:last-child{
+  color: var( --second-color);
+}
+.customer-gallery {
+  width: 100%;
+  display: flex;
+justify-content: space-between;
+}
+
+.customer-gallery figure{
+  width: 32%;
+}
+.customer-gallery figure div{
+  margin-bottom: 20px;
+}
+.customer-gallery figcaption{
+  font-size: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.customer-gallery figure img{
+  border-radius: 50%;
+object-fit: contain;
+width: 100%;
+display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.wedding-detail{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../public/images/house-croisette-promenade-in-cannes-bw.jpg) no-repeat center 60%;
+  color: white;
+  background-size: cover;
+background-attachment: fixed;
+}  
+.wedding-detail-top{
+
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../public/images/wedding-colorful-light-balls-845x321.jpg) no-repeat center 60%;
+  color: white;
+  background-size: cover;
+background-attachment: fixed;
+filter: grayscale();
+}  
+
+.wedding-detail h2{
+  font-size: 45px;
+}
+.wedding-detail p {
+  font-family: second-family;
+  font-size: 18px;
+  margin: 40px 0;
+  line-height: 1.7;
+}
+.Accomodations-bottom {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 30px 0;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  position: relative;
+  
+}
+
+.Accomodations-bottom .Accomodations-bottom-box{
+  width: 28%;
+}
+
+.Accomodations-bottom-box h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+  padding-top: 20px;
+  letter-spacing: 2px;
+  color: #333;
+  font-style: normal;
+}
+.Accomodations-bottom-box figure, .Accomodations-bottom-box-image{
+  overflow: hidden;
+
+}
+.Accomodations-bottom-box figure img{
+  width: 100%;
+  height: 100%;
+  transition: all .5s ;
+  
+}
+.Accomodations-bottom-box .Accomodations-bottom-box-image{
+  position: relative;}
+.Accomodations-bottom-box .Accomodations-bottom-box-image::after{
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+background-color: rgba(255, 255, 255, 0.6); 
+ transition: 1s;
+  opacity: 0;
+}
+.Accomodations-bottom-box .Accomodations-bottom-box-image:hover::after{
+  opacity: 1;
+}
+.Accomodations-bottom-box:hover figure img{
+  width: 100%;
+  transform: scale(1.1);
+}
+
+.Accomodations-bottom-box  figcaption
+{ font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  width: 100%;
+  color: #333;
+}
+.Accomodations-bottom-box > p{
+font-size: 14px;
+margin: 10px;
+text-align: center;
+width: 100%;
+color: #333;
+}
+.Accomodations-bottom-box  p{
+font-size: 13px;
+margin: 0px;
+text-align: center;
+width: 100%;
+color: #333;
+}
+.Accomodations-bottom .wedding-detail-inside{
+  width: 48%;
+}
+
+.wedding-detail-inside h3{
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  
+}
+.Accomodations-parent{
+  padding-bottom: 50px;
+}
+
+
+.wedding-detail-inside figcaption p{
+margin: 0;}
+.wedding-detail-inside figure img{
+  margin:10px 0;
+}
+.wedding-detail-inside  h3 span{
+  color: var(--second-color);
+}
+.Accomodations-description{
+  position: relative;
+}
+.Accomodations-description p{
+  text-align: center;
+}
+.Accomodations-description-last-text{
+  padding-bottom: 200px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  color: #333;
+
+}
+
+.Accomodations-description-bottom h3{
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+.Accomodations-description-bottom{
+  padding: 120px 0;
+  text-align: center;
+  background:  url(../public/images/wedding-colorful-light-balls-bw1.jpg) no-repeat center top;
+  color: white;
+  background-size: cover;
+background-attachment: fixed;
+position: relative;
+}
+.Accomodations-bottom:hover   figure img{
+  transform: scale(1);
+}
+.Accomodations-description-bottom .icon-parent-Accomodations{
+  background: linear-gradient(to right , black 0 40%,transparent 45% 55%,
+  black 60% 100%
+  );
+}
+.Accomodations-description-bottom  .icon-parent .fa-heart{
+background-color: transparent ;
+}
+.Accomodations-description-bottom:after{
+  content: "";
+  display: block;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top: 20px solid #d8d8d8;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50% , 0);
+  z-index: 2;
+}
+.contact-us{
+  width: 100%;
+  display: flex;
+  padding: 100px 0px;
+  background:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(../public/images/set1-young-couple.jpg) no-repeat  center top;
+  background-size: cover;
+  background-attachment: fixed;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.contact-us  form{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  /* min-height: 500px; */
+background-color: rgba(255, 255, 255, 0.2);  padding: 30px;
+  flex-direction: column;
+  padding: 50px 60px;
+}
+ 
+.icon-parent-contact-us{
+  background:linear-gradient(to right, white 0 45%,transparent 45% 55%
+, white 55% 100%)  ;
+  z-index: 500;
+  height: 1px;
+  width: 500px;
+}
+.icon-parent-contact-us .fa-heart{
+  background:transparent;
+  color: white;
+
+color: white;}
+.contact-us p{
+  color: white;
+  max-width: 500px;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.contact-us-title{
+  width: 100%;
+  text-align: center;
+  padding-top:30px ;
+  padding-bottom: 50px;
+font-size: 50px;
+color: white;
+}
+.parent-inputs{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact-us-input{
+  display: flex;
+  width: 49%;
+  flex-direction: column;
+  margin:15px  0;
+}
+.contact-us-input label{
+line-height: 1.8;
+font-size: 26px;
+margin-bottom: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.contact-us-input input, .contact-us-submit input{
+  background-color: transparent;
+border: 1px solid white;
+  font-size: 18px;
+  padding: 5px 10px;
+height: 40px;
+color: white;
+text-align: center;
+outline: 0;
+}
+
+.parent-inputs  label{
+  font-size: 12px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.contact-us-submit {
+  width: 100%;
+display: flex;justify-content: center; cursor: pointer;
+  margin-top: 10px;
 }
+.contact-us-submit  input{
+padding: 10px 30px;
+cursor: pointer;
+transition: .5s ease-in;
+display: inline-block;
+} 
+.contact-us-submit  input:hover{background-color: var(--second-color);
+} 
+.footer{
+  width: 100%;
+  font-size: 11px;
+  background-color: var(--main-color);
+  color: white;
+}
+.footer-wraper{
+  display: flex;
+  justify-content: space-between;
+  padding:30px 0;
+  align-items: center;
+  
+}
+.footer-right ul{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  display: flex;
+  width: 170px;
+  justify-content: space-between;
+}
+.elavator{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+color: white;
+background-color: var(--main-color);
+border: solid 1px white;
+cursor: pointer;
+transition: all .5s;
+position: fixed;
+right: 15px;
+bottom: 15px;
+opacity: .7;}
+.elavator:hover{
+  opacity: 1;
+}
+@media screen and (max-width: 990px) {
+  .Accomodations-bottom {
+flex-wrap: wrap; 
+
+ }
+  .Accomodations-bottom .Accomodations-bottom-box{
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .nav {
+    background-color: var(--main-color);
   }
+  .nav .logo {
+    width: 260px;
+  }
+  .display-none {
+    display: none;
+  }
+  .menu-toggler {
+    display: block;
+    color: var(--text-white);
+    font-size: 22px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  .menu-toggler:hover {
+    color: var(--text-white-hover);
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--main-color);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+  }
+  ul.menu li Link span {
+    border: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;  }
+
+  .header .header-section {
+    color: white;
+    text-align: center;
+    padding: 50px 0x;
+  }
+  .header .header-section h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    word-spacing: 0px;
+  }
+  .header .header-section p {
+    font-size: 14px;
+  }
+  .our-story-wraper {
+    flex-wrap: wrap;
+  }
+  .our-story-wraper p{
+    width: 100%;
+
+  }
+  .customers{
+flex-wrap: wrap;
+  }
+  .customers-side{
+width: 100%;}
+  
+}
+@media screen and (max-width: 768px) {
+
+  .Groom-Bride .groom-bride-box{
+    width: 100%;
+  }
+  .customer-gallery {
+  flex-wrap: wrap;}
+
+  .customer-gallery figure{
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 99, 71, 0.1);
+    padding: 20px 0;
+  }
+  .customer-gallery figure:last-child{
+    border: none;
+  }
+
+  .customer-gallery figcaption{
+margin:30px 0; 
+ }
+ .contact-us-input{
+  width: 100%;
+ }
+ .footer-wraper{
+ width: 100%;
+flex-wrap: wrap;
+}
+.footer-left , .footer-right{
+
+  width: 100%;
+  text-align:center ;
+  margin: 5px 0;
+}
+.footer-right ul{
+margin:0 auto;
+}
 }
